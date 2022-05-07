@@ -9,6 +9,8 @@ import { AboutComponent } from './about/about.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { SearchComponent } from './search/search.component';
 import { UnheroeComponent } from './unheroe/unheroe.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SuscriptoresComponent } from './suscriptores/suscriptores.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,14 @@ import { UnheroeComponent } from './unheroe/unheroe.component';
     AboutComponent,
     HeroesComponent,
     SearchComponent,
-    UnheroeComponent
+    UnheroeComponent,
+    SuscriptoresComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

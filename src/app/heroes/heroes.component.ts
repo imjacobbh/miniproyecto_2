@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Heroe } from '../heroes';
 import { HeroeService } from '../shared/heroe.service';
 
@@ -11,9 +11,11 @@ export class HeroesComponent implements OnInit {
 
   misHeroes: Heroe[] = [];
 
-  constructor(public miservicio: HeroeService) { 
+  constructor(public miservicio: HeroeService, private renderer: Renderer2) { 
     console.log("contructor de heores");
+    this.renderer.setStyle(document.body, 'background-image', 'none');
   }
+
 
   ngOnInit(): void {
     console.log("ngOnInit de Heroes");
