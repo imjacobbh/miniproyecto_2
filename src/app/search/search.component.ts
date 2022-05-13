@@ -23,17 +23,19 @@ export class SearchComponent implements OnInit {
   };
 
   constructor(private heroeService: HeroeService, private activatedRoute: ActivatedRoute, private renderer: Renderer2, private router: Router) {
-    this.renderer.setStyle(document.body, 'background', 'url(../../assets/img/bg.jpg) no-repeat 50%');
-    this.renderer.setStyle(document.body, 'background-size', 'cover');
-    this.renderer.setStyle(document.body, 'background-attachment', 'fixed');
+    this.renderer.setStyle(document.body, 'background-image', 'none');
     this.activatedRoute.params.subscribe(params => {
       this.nombreH = params['nombreH'];
       this.indice = this.heroeService.searchUnHeroe(this.nombreH);
       console.log(this.indice);
       if (this.indice != -1) {
         this.miHeroe = this.heroeService.getUnHeroe(this.indice)
+      } else {
+        this.countdownTimer()
+        this.renderer.setStyle(document.body, 'background', 'url(../../assets/img/bg.jpg) no-repeat 50%');
+        this.renderer.setStyle(document.body, 'background-size', 'cover');
+        this.renderer.setStyle(document.body, 'background-attachment', 'fixed');
       }
-      this.countdownTimer()
     });
   }
 
