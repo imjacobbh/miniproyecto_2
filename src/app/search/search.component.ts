@@ -23,7 +23,7 @@ export class SearchComponent implements OnInit {
   };
 
   constructor(private heroeService: HeroeService, private activatedRoute: ActivatedRoute, private renderer: Renderer2, private router: Router) {
-    this.renderer.setStyle(document.body, 'background', 'url(../../assets/img/bg.jpg) no-repeat 50%');
+    this.renderer.setStyle(document.body, 'background', 'url(assets/img/bg.jpg) no-repeat 50%');
     this.renderer.setStyle(document.body, 'background-size', 'cover');
     this.renderer.setStyle(document.body, 'background-attachment', 'fixed');
     this.activatedRoute.params.subscribe(params => {

@@ -13,7 +13,7 @@ export class SuscriptoresComponent implements OnInit {
   constructor(private renderer: Renderer2, private suscriptoresService: SuscriptoresService) { 
 
     this.suscriptores = this.suscriptoresService.getSuscriptores()
-    this.renderer.setStyle(document.body, 'background', 'url(../../assets/img/background.jpg) repeat 100%' );
+    this.renderer.setStyle(document.body, 'background', 'url(assets/img/background.jpg) repeat 100%' );
     this.renderer.setStyle(document.body, 'background-size', 'contain');
     this.renderer.setStyle(document.body, 'background-position', 'center');
   }

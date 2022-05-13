@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
     private renderer: Renderer2,
     private builder: FormBuilder, private suscriptoresService: SuscriptoresService
   ) {
-    this.renderer.setStyle(document.body, 'background', 'url(../../assets/img/background.jpg) repeat 100%' );
+    this.renderer.setStyle(document.body, 'background', 'url(assets/img/background.jpg) repeat 100%' );
     this.renderer.setStyle(document.body, 'background-size', 'contain');
     this.renderer.setStyle(document.body, 'background-position', 'center');
     this.reactiveForm = this.builder.group({
@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
       text: "Tu suscripción se ha relizado correctamente",
       confirmButtonColor: "#343a40",
       backdrop: `rgba(247,118,1,.6)
-      url(../../assets/img/gif-marvelgif.gif)
+      url(assets/img/gif-marvelgif.gif)
       right top
       no-repeat`
     });
